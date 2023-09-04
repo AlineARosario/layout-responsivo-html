@@ -1,0 +1,77 @@
+* {
+    margin: 0px; /*retira a margem e os espaços entre as palavras*/
+}
+
+
+
+body {
+    height: 100vh; /*altura*/ 
+    display: grid; /*add as linhas invisiveis do meu grid*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 70px; /* add minhas 3 linhas no grid */
+    background-color: rgb(245, 204, 189); /*add cor ao fundo*/
+    gap: 10px /* add espaço entre as bordas*/
+
+
+
+}
+
+header, main, footer {
+    border: 5px solid rgb(73, 53, 48); /*add borda, estilo e cor */
+    color: rgb(143, 97, 37); /*add cor aos menus*/
+    padding: 10px; /* espaçamento entre as bordas*/
+
+
+}
+
+nav, 
+section, 
+aside {
+    border: 2px solid black; /*borda entre eles*/
+    color:rgb(143, 97, 37);
+    padding: 10px;
+}
+
+nav { /*tamanho da minha caixa*/
+    width: 70%;
+}
+
+header { /*arrumei os locais certinhos do escrito header com a caixa nav*/
+    display: flex;
+    justify-content: space-between;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 30%; /* coloquei 2 colunas no meu main imaginarias*/
+    grid-template-rows: 40px 1fr 100px; /*coloquei 3 linhas no main imaginarias*/ 
+    grid-template-areas: 
+    "h1 aside"
+    "secion01 aside"
+    "section02 aside";
+
+    gap: 10px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+
+section>article {
+    border: 5px solid black;
+    color: rgb(143, 97, 37);
+    height: 70px; /*altura dos meus quadrados*/ 
+    margin-top: 5px;
+    padding: 10px; /*deu espaçamento dentro do quadrado*/
+}
+
+aside section {
+    border: 5px solid black;
+    height: 70px;
+    margin-top: 5px;
+    padding: 10px;/*deu espaçamento dentro do quadrado*/
+    
+
+}
